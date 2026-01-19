@@ -1,0 +1,20 @@
+:root {
+  --burgundy:    #2D0A16;
+  --deep:        #1A0509;
+  --blush:       #F2C4CE;
+  --rose:        #D4809A;
+  --champagne:   #E8D5B7;
+  --gold:        #C9A84C;
+  --gold-light:  #E4C97B;
+  --ivory:       #FAF6F0;
+  --text-dim:    #C4A4AE;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Lato', sans-serif;
+
+  --radius-sm:  2px;
+  --radius-md:  4px;
+  --radius-lg:  8px;
+
+  --transition: 0.2s ease;
+}
