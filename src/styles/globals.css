@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--burgundy);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Page transitions ── */
+
+.page-exit {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.page-enter {
+  opacity: 0;
+  animation: pageEnter 0.25s ease forwards;
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Card draw animation ── */
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Modal / overlay animations ── */
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 0.7; }
+}
+
+@keyframes panelSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Score pop animation ── */
+
+@keyframes scorePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+/* ── Prompt fade-in (spin the bottle) ── */
+
+@keyframes promptIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Toast enter / exit ── */
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(120%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.toast-exit {
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ── Home page particles ── */
+
+@keyframes float {
+  0%   { opacity: 0; transform: translateY(0) scale(0.5); }
+  20%  { opacity: var(--peak-opacity, 0.35); transform: translateY(0) scale(1); }
+  80%  { opacity: var(--peak-opacity, 0.35); transform: translateY(-60px) scale(1); }
+  100% { opacity: 0; transform: translateY(-80px) scale(0.3); }
+}
+
+/* ── Game card hover arrow ── */
+
+.play-arrow {
+  transition: transform 0.25s ease;
+}
+
+.game-card:hover .play-arrow {
+  transform: translateX(4px);
+}
+
+/* ── Mobile overrides ── */
+
+@media (max-width: 640px) {
+  .mode-card {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .settings-panel {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+  .hiw-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .gameplay-container {
+    padding: 1rem !important;
+  }
+  .gameplay-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+  }
+  .gameplay-actions button {
+    width: 100% !important;
+  }
+  .session-score-cards {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .session-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+  .session-stats > * {
+    flex: unset !important;
+    min-width: unset !important;
+  }
+  .room-sharing {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .room-player-cards {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .room-player-cards > div {
+    max-width: 100% !important;
+  }
+  .room-game-chips {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .room-game-chips > * {
+    width: 100% !important;
+  }
+  .room-code-display {
+    font-size: 2rem !important;
+  }
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* ── Tablet overrides ── */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hiw-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+button {
+  min-height: 44px;
+}
+
+button:not(nav button) {
+  min-width: 44px;
+}
