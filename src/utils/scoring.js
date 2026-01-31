@@ -35,6 +35,7 @@ export function calculatePoints(action, gameId) {
 export function checkStreak(history, playerIndex) {
   const playerEntries = history
     .filter((e) => e.playerIndex === playerIndex && e.result === 'completed')
+  if (playerEntries.length < 5) return false
   const lastFive = playerEntries.slice(0, 5)
   return lastFive.length === 5
 }
