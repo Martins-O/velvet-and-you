@@ -44,3 +44,8 @@ export function drawNext(deck, usedIndices) {
 export function resetDeck(gameId, intensity) {
   return buildDeck(gameId, intensity)
 }
+
+export function getDeckProgress(usedIndices, deckLength) {
+  if (deckLength === 0) return 0
+  return Math.round((usedIndices.length / deckLength) * 100)
+}
