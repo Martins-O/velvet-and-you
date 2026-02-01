@@ -32,6 +32,8 @@ const useGameStore = create((set, get) => ({
 
   drawCard: () => {
     const { deck, usedIndices } = get()
+    if (deck.length === 0) return { card: null, reshuffled: false }
+
     const available = deck
       .map((card, i) => ({ card, i }))
       .filter(({ i }) => !usedIndices.includes(i))
