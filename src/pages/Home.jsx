@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 import PageWrapper from '../components/layout/PageWrapper'
 
-const particles = Array.from({ length: 25 }, (_, i) => ({
+const particles = Array.from({ length: 30 }, (_, i) => ({
   id: i,
   left: Math.random() * 80 + 10,
   top: Math.random() * 80 + 10,
-  size: Math.random() * 2.5 + 1.5,
-  duration: Math.random() * 7 + 5,
-  delay: Math.random() * 8,
-  peakOpacity: Math.random() * 0.3 + 0.2,
+  size: Math.random() * 3 + 1,
+  duration: Math.random() * 8 + 4,
+  delay: Math.random() * 10,
+  peakOpacity: Math.random() * 0.35 + 0.15,
 }))
 
 const cards = [
