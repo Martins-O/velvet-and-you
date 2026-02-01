@@ -152,7 +152,9 @@ function GamePlay() {
 
   const handleDraw = () => {
     if (currentHistoryId !== null) return
-    if (isOnline && (!isHost || currentTurn !== 0)) return
+    if (isOnline && !isHost) return
+    if (isOnline && isHost && currentTurn !== 0) return
+    if (showHandOff) return
     drawNextCard()
   }
 
