@@ -157,7 +157,7 @@ function GameLobby() {
             fontWeight: 300,
           }}
         >
-          Pick a mood. Set your intensity. Let the night unfold.
+          Pick a mood. Set your intensity. Let the evening unfold.
         </p>
 
         <div
