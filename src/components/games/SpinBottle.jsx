@@ -65,6 +65,7 @@ function SpinBottle() {
     play('bottle_spin')
     setIsSpinning(true)
     setShowPrompt(false)
+    setShowPrompt(false)
 
     const delta = 720 + Math.random() * 360
     setRotation((prev) => prev + delta)
