@@ -37,7 +37,7 @@ function TurnIndicator() {
         color: 'var(--gold)',
       }}
     >
-      {playerNames[currentTurn]}'s turn
+      {playerNames[currentTurn]}&apos;s turn
     </div>
   )
 }
