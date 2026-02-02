@@ -16,14 +16,15 @@ function CardDisplay({ card, isRevealed, gameId, intensity, onFavourite }) {
         }}
       >
         <p
-          style={{
-            color: 'var(--text-dim)',
-            fontSize: '0.9rem',
-            margin: 0,
-          }}
-        >
-          Press &ldquo;Draw Card&rdquo; to begin
-        </p>
+            style={{
+              color: 'var(--text-dim)',
+              fontSize: '0.9rem',
+              margin: 0,
+              fontStyle: 'italic',
+            }}
+          >
+            Press &ldquo;Draw Card&rdquo; to begin
+          </p>
       </div>
     )
   }
