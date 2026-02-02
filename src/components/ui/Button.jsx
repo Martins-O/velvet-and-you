@@ -10,9 +10,9 @@ function Button({ variant = 'primary', size = 'md', onClick, disabled, children,
   }
 
   const sizes = {
-    sm: { fontSize: '0.65rem', padding: '0.4rem 0.9rem' },
-    md: { fontSize: '0.82rem', padding: '0.75rem 2rem' },
-    lg: { fontSize: '0.9rem', padding: '0.9rem 2.4rem' },
+    sm: { fontSize: '0.65rem', padding: '0.4rem 0.9rem', minHeight: '32px' },
+    md: { fontSize: '0.82rem', padding: '0.75rem 2rem', minHeight: '44px' },
+    lg: { fontSize: '0.9rem', padding: '0.9rem 2.4rem', minHeight: '48px' },
   }
 
   const variants = {
