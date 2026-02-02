@@ -25,7 +25,7 @@ function TimerBar({ onExpire }) {
     return () => clearInterval(interval)
   }, [timerEnabled, timerDuration, onExpire])
 
-  if (!timerEnabled) return null
+  if (!timerEnabled || timerDuration <= 0) return null
 
   const pct = Math.min((elapsed / timerDuration) * 100, 100)
 
