@@ -7,7 +7,7 @@ function FavouriteButton({ card, gameId, intensity, onToggle }) {
   const { addToast } = useToast()
   const { play } = useSound()
 
-  const isSaved = favourites.some((f) => f.card === card)
+  const isSaved = favourites.some((f) => f.card === card || f.text === card)
 
   const handleToggle = () => {
     if (isSaved) {
