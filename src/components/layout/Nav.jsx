@@ -53,7 +53,7 @@ function Nav() {
         WebkitBackdropFilter: 'blur(8px)',
         backdropFilter: 'blur(8px)',
         borderBottom: '0.5px solid rgba(201, 168, 76, 0.2)',
-        padding: '1.2rem 2rem',
+        padding: '0.9rem 2rem',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
