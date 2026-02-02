@@ -1,5 +1,11 @@
 const levels = ['romantic', 'playful', 'spicy']
 
+const labels = {
+  romantic: 'Romantic',
+  playful: 'Playful',
+  spicy: 'Spicy',
+}
+
 function IntensitySelector({ value, onChange }) {
   return (
     <div
@@ -31,7 +37,7 @@ function IntensitySelector({ value, onChange }) {
               transition: 'var(--transition)',
             }}
           >
-            {level}
+            {labels[level]}
           </button>
         )
       })}
