@@ -35,7 +35,7 @@ function ScoreBoard() {
               animation: 'scorePop 0.3s ease',
             }}
           >
-            {scores[i] || 0}
+            {scores[i] ?? 0}
           </div>
         </div>
       ))}
