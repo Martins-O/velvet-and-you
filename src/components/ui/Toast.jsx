@@ -5,6 +5,7 @@ const typeStyles = {
   default: 'var(--gold)',
   success: '#4CAF50',
   error: '#E24B4A',
+  warning: '#E4A84C',
 }
 
 function ToastItem({ toast }) {
