@@ -53,6 +53,7 @@ function Modal({ isOpen, onClose, title, children }) {
               fontSize: '1.2rem',
               cursor: 'pointer',
               lineHeight: 1,
+              transition: 'color 0.2s ease',
             }}
             onMouseEnter={(e) => { e.target.style.color = 'var(--ivory)' }}
             onMouseLeave={(e) => { e.target.style.color = 'var(--text-dim)' }}
