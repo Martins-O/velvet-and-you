@@ -3,6 +3,7 @@ function Badge({ children, variant = 'default' }) {
     default: { background: 'rgba(255,255,255,0.08)', color: 'var(--champagne)' },
     gold: { background: 'rgba(201,168,76,0.15)', color: 'var(--gold)' },
     blush: { background: 'rgba(242,196,206,0.15)', color: 'var(--blush)' },
+    rose: { background: 'rgba(212,128,154,0.15)', color: 'var(--rose)' },
   }
 
   return (
