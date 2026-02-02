@@ -5,7 +5,7 @@ function Card({ children, className, onClick, hover = false }) {
     background: 'rgba(26,5,9,0.5)',
     padding: '1.6rem 1.4rem',
     transition: 'border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease',
-    cursor: onClick ? 'pointer' : undefined,
+    cursor: onClick || hover ? 'pointer' : undefined,
   }
 
   const handleEnter = (e) => {
