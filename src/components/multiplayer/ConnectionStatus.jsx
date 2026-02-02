@@ -1,7 +1,7 @@
 function ConnectionStatus({ state }) {
   if (!state || state === 'idle') return null
 
-  const isPulsing = state === 'reconnecting'
+  const isPulsing = state === 'reconnecting' || state === 'connecting'
   const label = {
     connected: 'Connected',
     reconnecting: 'Reconnecting\u2026',
