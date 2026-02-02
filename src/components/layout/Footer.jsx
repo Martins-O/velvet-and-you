@@ -10,7 +10,7 @@ function Footer() {
         letterSpacing: '0.06em',
       }}
     >
-      <span style={{ color: 'var(--gold)' }}>Velvet & You</span>
+      <span style={{ color: 'var(--gold)', fontFamily: 'var(--font-display)' }}>Velvet & You</span>
       {' · '}
       For consenting adults
       {' · '}
